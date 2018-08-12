@@ -42,5 +42,11 @@ export default {
       type: 'image',
       fields: [{type: 'string', title: 'Caption', name: 'caption', options: {isHighlighted: true}}]
     }
-  ]
+  ],
+    preview: {
+        select: {
+            title: 'title',
+            subtitle: 'body'
+        }
+    }
 }
