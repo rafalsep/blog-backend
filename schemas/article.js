@@ -4,10 +4,33 @@ export default {
     type: 'document',
     fields: [
         {
+            name: 'title',
+            title: 'Title',
+            type: 'text'
+        },
+        {
+            name: 'slug',
+            title: 'Slug',
+            type: 'slug',
+            options: {
+                source: 'title',
+                maxLength: 96
+            }
+        },
+        {
+            name: 'image',
+            title: 'Image',
+            type: 'image'
+        },
+        {
+            name: 'publishedAt',
+            title: 'Published at',
+            type: 'datetime'
+        },
+        {
             name: 'teaser',
             title: 'Teaser',
-            type: 'reference',
-            to: {type: 'articleTeaser'}
+            type: 'text'
         },
         {
             name: 'content',
@@ -24,7 +47,7 @@ export default {
 
     preview: {
         select: {
-            title: 'teaser.title'
+            title: 'title'
         }
     }
 }
